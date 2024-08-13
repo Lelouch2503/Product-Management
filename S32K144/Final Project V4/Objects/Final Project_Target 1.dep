@@ -1,0 +1,121 @@
+Dependencies for Project 'Final Project', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6140000::V6.14::ARMCLANG
+F (.\main.c)(0x669B6980)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/main.o -MD)
+I (..\Final Project V2\main.h)(0x669B66FC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (Protocol\LPSPI.h)(0x669B2F98)
+I (Protocol\LPSPI_Register.h)(0x669B301A)
+I (Protocol\I2C.h)(0x669A2C2B)
+I (..\Final Project V2\Systick_Delay.h)(0x669A2A7E)
+I (..\Final Project V2\clock.h)(0x66977AB3)
+I (..\Final Project V2\gpio.h)(0x66908940)
+I (..\Final Project V2\Gpio_Registers.h)(0x669B1E4C)
+I (..\Final Project V2\PCC.h)(0x669B1FB7)
+I (LIB\i2c-lcd.h)(0x669B205C)
+I (LIB\mfrc522.h)(0x669B305B)
+F (.\Systick_Delay.c)(0x669A29CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/systick_delay.o -MD)
+I (..\Final Project V2\Systick_Delay.h)(0x669A2A7E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+F (.\clock.c)(0x66977ACD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/clock.o -MD)
+I (..\Final Project V2\clock.h)(0x66977AB3)
+F (.\gpio.c)(0x669B1E6F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/gpio.o -MD)
+I (..\Final Project V2\gpio.h)(0x66908940)
+I (..\Final Project V2\Gpio_Registers.h)(0x669B1E4C)
+F (.\Protocol\LPSPI.c)(0x669B306C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/lpspi.o -MD)
+I (Protocol\LPSPI.h)(0x669B2F98)
+I (Protocol\LPSPI_Register.h)(0x669B301A)
+I (..\Final Project V2\main.h)(0x669B66FC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (Protocol\I2C.h)(0x669A2C2B)
+I (..\Final Project V2\Systick_Delay.h)(0x669A2A7E)
+I (..\Final Project V2\clock.h)(0x66977AB3)
+I (..\Final Project V2\gpio.h)(0x66908940)
+I (..\Final Project V2\Gpio_Registers.h)(0x669B1E4C)
+I (..\Final Project V2\PCC.h)(0x669B1FB7)
+I (LIB\i2c-lcd.h)(0x669B205C)
+I (LIB\mfrc522.h)(0x669B305B)
+F (.\Protocol\I2C.c)(0x669A2C4A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/i2c.o -MD)
+I (Protocol\I2C.h)(0x669A2C2B)
+I (..\Final Project V2\main.h)(0x669B66FC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (Protocol\LPSPI.h)(0x669B2F98)
+I (Protocol\LPSPI_Register.h)(0x669B301A)
+I (..\Final Project V2\Systick_Delay.h)(0x669A2A7E)
+I (..\Final Project V2\clock.h)(0x66977AB3)
+I (..\Final Project V2\gpio.h)(0x66908940)
+I (..\Final Project V2\Gpio_Registers.h)(0x669B1E4C)
+I (..\Final Project V2\PCC.h)(0x669B1FB7)
+I (LIB\i2c-lcd.h)(0x669B205C)
+I (LIB\mfrc522.h)(0x669B305B)
+F (.\LIB\i2c-lcd.c)(0x66961070)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/i2c-lcd.o -MD)
+I (LIB\i2c-lcd.h)(0x669B205C)
+I (..\Final Project V2\main.h)(0x669B66FC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (Protocol\LPSPI.h)(0x669B2F98)
+I (Protocol\LPSPI_Register.h)(0x669B301A)
+I (Protocol\I2C.h)(0x669A2C2B)
+I (..\Final Project V2\Systick_Delay.h)(0x669A2A7E)
+I (..\Final Project V2\clock.h)(0x66977AB3)
+I (..\Final Project V2\gpio.h)(0x66908940)
+I (..\Final Project V2\Gpio_Registers.h)(0x669B1E4C)
+I (..\Final Project V2\PCC.h)(0x669B1FB7)
+I (LIB\mfrc522.h)(0x669B305B)
+F (.\LIB\mfrc522.c)(0x669B2E35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/mfrc522.o -MD)
+I (LIB\mfrc522.h)(0x669B305B)
+I (..\Final Project V2\main.h)(0x669B66FC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (Protocol\LPSPI.h)(0x669B2F98)
+I (Protocol\LPSPI_Register.h)(0x669B301A)
+I (Protocol\I2C.h)(0x669A2C2B)
+I (..\Final Project V2\Systick_Delay.h)(0x669A2A7E)
+I (..\Final Project V2\clock.h)(0x66977AB3)
+I (..\Final Project V2\gpio.h)(0x66908940)
+I (..\Final Project V2\Gpio_Registers.h)(0x669B1E4C)
+I (..\Final Project V2\PCC.h)(0x669B1FB7)
+I (LIB\i2c-lcd.h)(0x669B205C)
+F (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\startup.c)(0x65D4328A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/startup.o -MD)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\startup.h)(0x65D43288)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\device_registers.h)(0x65D43288)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\common\s32_core_cm4.h)(0x65D4328A)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\S32K144\include\S32K144.h)(0x65D4328A)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F58EE)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F58EE)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F58EE)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F58EE)
+I (RTE\Device\S32K144HAxxxLLx\system_S32K144.h)(0x65D43288)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\S32K144\include\S32K144_features.h)(0x65D43288)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\devassert.h)(0x65D43288)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
+F (RTE\Device\S32K144HAxxxLLx\S32K144_64_flash.sct)(0x65D4328A)()
+F (RTE\Device\S32K144HAxxxLLx\S32K144_64_ram.sct)(0x65D4328A)()
+F (RTE\Device\S32K144HAxxxLLx\startup_S32K144.S)(0x65D4328A)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-3-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION=531 -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/startup_s32k144.o)
+F (RTE\Device\S32K144HAxxxLLx\system_S32K144.c)(0x65D43288)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I "../Final Project V2" -I ./LIB -I ./Protocol-I./RTE/Device/S32K144HAxxxLLx-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.5.1/platform/devices/common-D__UVISION_VERSION="531" -D_RTE_ -DCPU_S32K144HFT0VLLT -D_RTE_-o ./objects/system_s32k144.o -MD)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\device_registers.h)(0x65D43288)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\common\s32_core_cm4.h)(0x65D4328A)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\S32K144\include\S32K144.h)(0x65D4328A)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F58EE)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F58EE)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F58EE)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F58EE)
+I (RTE\Device\S32K144HAxxxLLx\system_S32K144.h)(0x65D43288)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\S32K144\include\S32K144_features.h)(0x65D43288)
+I (C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.1\platform\devices\devassert.h)(0x65D43288)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
+F (RTE\Device\S32K144HAxxxLLx\system_S32K144.h)(0x65D43288)()
