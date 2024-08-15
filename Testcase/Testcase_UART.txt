@@ -1,0 +1,32 @@
+Test Case ID: TC_UART_ESP32_S32K144_01
+Test Description: Kiểm tra khả năng giao tiếp UART giữa ESP32 và S32K144, xác minh rằng ESP32 có thể nhận và xử lý đúng các lệnh từ S32K144.
+Preconditions:
+•	ESP32 đã được nạp chương trình với mã đã cung cấp.
+•	S32K144 đã được lập trình để gửi các lệnh qua UART đến ESP32.
+•	Kết nối phần cứng giữa ESP32 và S32K144 đã được thiết lập đúng cách (TX của S32K144 nối với RX của ESP32 và ngược lại).
+•	ESP32 và S32K144 đều đang hoạt động và kết nối với nguồn.
+Test Steps:
+1.	Khởi động ESP32 và S32K144.
+o	Expected Result: ESP32 kết nối thành công với mạng Wi-Fi và sẵn sàng nhận lệnh từ S32K144 qua UART.
+2.	Gửi lệnh "Reload" từ S32K144 tới ESP32.
+o	Expected Result: ESP32 nhận được lệnh "Reload" qua UART, in ra thông báo "Received Reload command. Fetching all products...", và gọi hàm fetchAllProducts().
+o	Verify: Kiểm tra trên terminal của ESP32 để thấy các thông báo phù hợp và các thông tin sản phẩm được gửi qua lại giữa ESP32 và S32K144.
+3.	Gửi lệnh "d|<ID>|e" từ S32K144 tới ESP32 (thay <ID> bằng ID thực tế của sản phẩm cần xóa).
+o	Expected Result: ESP32 nhận được lệnh xóa, in ra thông báo xác nhận và gọi hàm deleteProductFromMongoDB() với đúng ID.
+o	Verify: Kiểm tra trên terminal của ESP32 để thấy thông báo HTTP DELETE request được gửi đi và nhận phản hồi từ máy chủ.
+4.	Gửi lệnh "s|<ID>|<location>|<status>|e" từ S32K144 tới ESP32 (thay <ID>, <location>, <status> bằng các giá trị thực tế).
+o	Expected Result: ESP32 nhận được lệnh "s|<ID>|<location>|<status>|e", phân tích cú pháp đúng, và cập nhật hoặc thêm mới thông tin sản phẩm vào cơ sở dữ liệu.
+o	Verify: Kiểm tra terminal của ESP32 để thấy các thông tin sản phẩm được xử lý và HTTP request PUT hoặc POST được thực hiện đúng.
+Test Data:
+•	Lệnh "Reload"
+•	Lệnh "d|1234567890|e" (ID giả định: 1234567890)
+•	Lệnh "s|1234567890|Warehouse A|1|e" (ID giả định: 1234567890, location: Warehouse A, status: 1)
+Expected Result:
+•	Tất cả các lệnh được ESP32 nhận và xử lý đúng. Các thông báo phù hợp hiển thị trên terminal của ESP32 và các HTTP request được gửi đi tương ứng với từng lệnh.
+Actual Result:
+•	ESP32 nhận đúng
+Status:
+•	Pass
+Remarks:
+•	Nếu có bất kỳ lệnh nào không được xử lý đúng, kiểm tra lại mã lệnh xử lý UART trên ESP32 và S32K144 để đảm bảo các lệnh được gửi đi đúng định dạng và xử lý chính xác.
+

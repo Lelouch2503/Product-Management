@@ -1,0 +1,43 @@
+Test Case ID: TC_LCD1602_01
+Test Description: Kiểm tra việc hiển thị chuỗi ký tự trên màn hình LCD1602 thông qua giao tiếp với S32K144.
+Preconditions:
+•	S32K144 đã được lập trình sẵn với mã giao tiếp I2C để điều khiển LCD1602.
+•	Màn hình LCD1602 đã được kết nối đúng cách với S32K144 (các chân I2C, nguồn, và GND đã được kết nối).
+•	Hệ thống đã được cấp nguồn và khởi động.
+Test Steps:
+1.	Khởi động S32K144 và chạy chương trình điều khiển LCD1602.
+2.	Gửi lệnh khởi tạo màn hình LCD1602 (ví dụ: chế độ hiển thị, số dòng, kiểu chữ).
+3.	Gửi chuỗi ký tự "Hello World!" đến màn hình LCD1602 thông qua S32K144.
+4.	Đợi một khoảng thời gian ngắn (ví dụ: 1 giây) để màn hình LCD1602 cập nhật nội dung hiển thị.
+5.	Kiểm tra nội dung hiển thị trên LCD1602.
+Test Data:
+•	Chuỗi ký tự để hiển thị: "Hello World!"
+•	Thông số khởi tạo màn hình: chế độ 4-bit, 2 dòng, kiểu chữ 5x8.
+Expected Result:
+•	Màn hình LCD1602 hiển thị chính xác chuỗi "Hello World!" ở dòng đầu tiên.
+Actual Result:
+•	(Phần này sẽ được điền sau khi thực hiện kiểm thử)
+Status:
+•	(Pass hoặc Fail tùy thuộc vào kết quả thực tế)
+Remarks:
+•	Nếu có hiện tượng hiển thị sai, cần kiểm tra lại các kết nối I2C, cấu hình khởi tạo hoặc mã điều khiển trên S32K144, hoặc kết nối dây giữa LCD1602 và S32K144
+
+Test Case ID: TC_LCD1602_02
+Test Description: Kiểm tra việc xóa màn hình LCD1602 thông qua giao tiếp với S32K144.
+Preconditions:
+•	Màn hình LCD1602 đã hiển thị chuỗi ký tự từ test case trước.
+Test Steps:
+1.	Gửi lệnh xóa màn hình từ S32K144 đến LCD1602.
+2.	Đợi một khoảng thời gian ngắn (ví dụ: 500ms) để màn hình LCD1602 xử lý lệnh.
+3.	Kiểm tra xem màn hình LCD1602 đã bị xóa hoàn toàn hay chưa.
+Test Data:
+•	Lệnh xóa màn hình: 0x01 (lệnh xóa màn hình cho LCD1602).
+Expected Result:
+•	Màn hình LCD1602 hoàn toàn trống, không có ký tự nào hiển thị.
+Actual Result:
+•	(Phần này sẽ được điền sau khi thực hiện kiểm thử)
+Status:
+•	PASS
+Remarks:
+•	Nếu màn hình không bị xóa hoàn toàn, cần kiểm tra lại mã lệnh và giao tiếp giữa S32K144 và LCD1602, hoặc kết nối dây giữa LCD1602 và S32K144
+

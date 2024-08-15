@@ -1,0 +1,23 @@
+Test Case ID: TC_RC522_01
+Test Description: Kiểm tra khả năng giao tiếp giữa S32K144 và module RFID RC522, xác nhận việc đọc dữ liệu từ thẻ RFID thành công.
+Preconditions:
+•	S32K144 đã được lập trình để giao tiếp với RC522 qua giao thức SPI.
+•	Module RC522 đã được kết nối đúng cách với S32K144 (các chân MISO, MOSI, SCK, CS, nguồn và GND đã được kết nối).
+•	Thẻ RFID hợp lệ đã được chuẩn bị sẵn sàng.
+Test Steps:
+1.	Khởi động S32K144 và module RC522.
+2.	Đưa thẻ RFID vào gần module RC522 trong phạm vi đọc.
+3.	S32K144 gửi lệnh khởi tạo RC522 và lệnh đọc dữ liệu từ thẻ RFID.
+4.	Nhận dữ liệu từ RC522 và kiểm tra xem S32K144 có nhận được mã ID (UID) của thẻ RFID hay không.
+5.	So sánh mã UID nhận được với giá trị dự kiến.
+Test Data:
+•	Mã UID của thẻ RFID: 0x04AABBCCDD (ví dụ mã UID thực tế).
+Expected Result:
+•	S32K144 nhận được mã UID của thẻ RFID từ module RC522 chính xác, ví dụ: 0x04AABBCCDD.
+Actual Result:
+•	S32K144 nhận được mã UID của thẻ RFID từ module RC522 
+Status:
+•	Pass
+Remarks:
+•	Cần lưu ý cấu hình chân trên SPI, sử dụng chân chọn chip cấu hình MUX là GPIO trên chân PB0
+•	Cấu hình 2 bit PCS trên thanh ghi TCR để chọn PBO(PSC0) làm chân chọn chip trên S32K144

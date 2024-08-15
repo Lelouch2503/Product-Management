@@ -1,0 +1,35 @@
+// Code Flowchart
+digraph {
+	A [label=Start]
+	B [label="Init()"]
+	C [label="menu == 0"]
+	D [label="CheckAvailableTag()"]
+	E [label="IsMasterID()"]
+	F [label="subMenu = 1"]
+	G [label="IsSlaveIDInSys()"]
+	H [label="Item Found"]
+	I [label="Item Not Found"]
+	J [label="menu == 1"]
+	K [label="RegisterCard()"]
+	L [label="menu == 2"]
+	M [label="DeleteCard()"]
+	N [label=End]
+	A -> B
+	B -> C
+	C -> D [label=Yes]
+	C -> J [label=No]
+	D -> E
+	E -> F [label=No]
+	E -> C [label=Yes]
+	F -> G
+	G -> H [label=Found]
+	G -> I [label="Not Found"]
+	H -> C [label="Display and Return"]
+	I -> C [label="Display and Return"]
+	J -> K
+	K -> C [label="Return to Menu"]
+	J -> L [label=Else]
+	L -> M
+	M -> C [label="Return to Menu"]
+	C -> N [label="menu >= 2"]
+}

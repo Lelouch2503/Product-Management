@@ -1,1 +1,1 @@
-./objects/clock.o: clock.c clock.h
+./objects/clock.o: clock.c ..\Final\ Project\ V4\clock.h
