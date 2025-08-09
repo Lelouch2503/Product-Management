@@ -123,56 +123,56 @@ int main()
 					 if Slave card is not in system => display "Card not found"
 					 else display "Door Unlocked" then implement a 10s counterer to open the door
 				****************************************************************************/
-				if(flag == 0)
-				{
-					int index = IsSlaveIDInSys();
-					if(index > -1)
-					{
-						lcd_clear();
-						lcd_put_cur(0, 0);
-						if((slaveID[index].status) == 0)
-						{
-							lcd_send_string(slaveID[index].itemName);
-							lcd_send_string(" Import");
-							slaveID[index].status = 1;
-						}
-						else if((slaveID[index].status) == 1){
-							lcd_send_string(slaveID[index].itemName);
-							lcd_send_string(" Export");
-							slaveID[index].status = 0;
-						}
-						sendData(slaveID[index]);
-						counter = 2;
-						flag = 1;
-					}
-					else if(index == -1)
-					{
-						lcd_clear();
-						lcd_put_cur(0, 0);
-						lcd_send_string("Item Not Found   ");
-						flag = 2;
-						counter = 2;
-					}
-				}
-				else if(flag != 0)
-				{
-					int index = IsSlaveIDInSys();
-					if(flag == 1) {
-						lcd_put_cur(1, 0);
-						lcd_send_string(slaveID[index].location);
-						lcd_put_cur(1, 11);
-						lcd_send_num((uint8_t)counter);
-					}
-					else if(flag == 2)
-					{
-						lcd_put_cur(1, 0);
-						lcd_send_string("PLS Register");
-					}
-					counter--;
-					if(counter == 0)
-					{
-						counter = -1;
-						prevSubMenu = -1;
+                               static int cachedIndex = -1;
+                               if(flag == 0)
+                               {
+                                       cachedIndex = IsSlaveIDInSys();
+                                       if(cachedIndex > -1)
+                                       {
+                                               lcd_clear();
+                                               lcd_put_cur(0, 0);
+                                               if((slaveID[cachedIndex].status) == 0)
+                                               {
+                                                       lcd_send_string(slaveID[cachedIndex].itemName);
+                                                       lcd_send_string(" Import");
+                                                       slaveID[cachedIndex].status = 1;
+                                               }
+                                               else if((slaveID[cachedIndex].status) == 1){
+                                                       lcd_send_string(slaveID[cachedIndex].itemName);
+                                                       lcd_send_string(" Export");
+                                                       slaveID[cachedIndex].status = 0;
+                                               }
+                                               sendData(slaveID[cachedIndex]);
+                                               counter = 2;
+                                               flag = 1;
+                                       }
+                                       else if(cachedIndex == -1)
+                                       {
+                                               lcd_clear();
+                                               lcd_put_cur(0, 0);
+                                               lcd_send_string("Item Not Found   ");
+                                               flag = 2;
+                                               counter = 2;
+                                       }
+                               }
+                               else if(flag != 0)
+                               {
+                                       if(flag == 1) {
+                                               lcd_put_cur(1, 0);
+                                               lcd_send_string(slaveID[cachedIndex].location);
+                                               lcd_put_cur(1, 11);
+                                               lcd_send_num((uint8_t)counter);
+                                       }
+                                       else if(flag == 2)
+                                       {
+                                               lcd_put_cur(1, 0);
+                                               lcd_send_string("PLS Register");
+                                       }
+                                       counter--;
+                                       if(counter == 0)
+                                       {
+                                               counter = -1;
+                                               prevSubMenu = -1;
 						subMenu = 0;
 						flag = 0;
 					}
