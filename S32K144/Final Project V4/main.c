@@ -125,26 +125,27 @@ int main()
 				****************************************************************************/
 				if(flag == 0)
 				{
-					if(IsSlaveIDInSys() > -1)
+					int index = IsSlaveIDInSys();
+					if(index > -1)
 					{
 						lcd_clear();
 						lcd_put_cur(0, 0);
-						if((slaveID[IsSlaveIDInSys()].status) == 0)
+						if((slaveID[index].status) == 0)
 						{
-							lcd_send_string(slaveID[IsSlaveIDInSys()].itemName);
+							lcd_send_string(slaveID[index].itemName);
 							lcd_send_string(" Import");
-							slaveID[IsSlaveIDInSys()].status = 1;
+							slaveID[index].status = 1;
 						}
-						else if((slaveID[IsSlaveIDInSys()].status) == 1){
-							lcd_send_string(slaveID[IsSlaveIDInSys()].itemName);
+						else if((slaveID[index].status) == 1){
+							lcd_send_string(slaveID[index].itemName);
 							lcd_send_string(" Export");
-							slaveID[IsSlaveIDInSys()].status = 0;
+							slaveID[index].status = 0;
 						}
-						sendData(slaveID[IsSlaveIDInSys()]);
+						sendData(slaveID[index]);
 						counter = 2;
 						flag = 1;
 					}
-					else if(IsSlaveIDInSys() == -1)
+					else if(index == -1)
 					{
 						lcd_clear();
 						lcd_put_cur(0, 0);
@@ -155,9 +156,10 @@ int main()
 				}
 				else if(flag != 0)
 				{
+					int index = IsSlaveIDInSys();
 					if(flag == 1) {
 						lcd_put_cur(1, 0);
-						lcd_send_string(slaveID[IsSlaveIDInSys()].location);
+						lcd_send_string(slaveID[index].location);
 						lcd_put_cur(1, 11);
 						lcd_send_num((uint8_t)counter);
 					}
@@ -208,14 +210,15 @@ int main()
 			{
 				if(flag == 0)
 				{
-					if(IsSlaveIDInSys() > -1)
+					int index = IsSlaveIDInSys();
+					if(index > -1)
 					{
 						lcd_clear();
 						lcd_put_cur(0, 0);
 						lcd_send_string("Item Available");
 						flag = 1;
 					}
-					else if (IsSlaveIDInSys() == -1)
+					else if (index == -1)
 					{
 						if(prevSubMenu != 1) {
 							lcd_clear();
@@ -244,6 +247,7 @@ int main()
 					lcd_clear();
 					lcd_send_num(2);
 				}
+			}
 			}
 		}
 		else if(menu == 2)
@@ -277,7 +281,8 @@ int main()
 			{
 				if(flag == 0)
 				{
-					if(IsSlaveIDInSys() > -1)
+					int index = IsSlaveIDInSys();
+					if(index > -1)
 					{
 						DeleteCard();
 						lcd_clear();
@@ -287,7 +292,7 @@ int main()
 						lcd_send_string("succesfully");
 						flag = 1;
 					}
-					else if (IsSlaveIDInSys() == -1)
+					else if (index == -1)
 					{
 						lcd_clear();
 						lcd_put_cur(0, 0);
@@ -364,20 +369,23 @@ void LPUART1_RxTx_IRQHandler(void) {
 
 void PORTC_IRQHandler(void)
 {
-	if(PORTC->PORT_PCRn[12] & (1 << 24))
+	struct { uint8_t pin; const char *loc; } pinMap[] = {
+		{12, "kho1"},
+		{13, "kho2"}
+	};
+
+	for(int i = 0; i < (int)(sizeof(pinMap)/sizeof(pinMap[0])); i++)
 	{
-		strcpy(location, "kho1");
-		check1 = 1;
-		PORTC->PORT_PCRn[12] |= (1 << 24);
-	}
-	
-	if(PORTC->PORT_PCRn[13] & (1 << 24))
-	{
-		strcpy(location, "kho2");
-		check1 = 1;
-		PORTC->PORT_PCRn[13] |= (1 << 24);
+		uint8_t pin = pinMap[i].pin;
+		if(PORTC->PORT_PCRn[pin] & (1 << 24))
+		{
+			strcpy(location, pinMap[i].loc);
+			check1 = 1;
+			PORTC->PORT_PCRn[pin] |= (1 << 24);
+		}
 	}
 }
+
 
 void Init(void) {
 	/* Clock configuration */
@@ -398,7 +406,6 @@ void Init(void) {
 	/* LPI2C Init */
 	LPI2C0_clock();
 	LPI2C0_init();
-	LPUART_init(LPUART1, 9600, CLOCK_SOSC);
 	
 	/*Module RC522 init*/
 	TM_MFRC522_Init();
@@ -557,19 +564,9 @@ int IsSlaveIDInSys(void)
 @Return       : 0: not master Card
 				        1: is master Card
  *******************************************************************************/
-bool IsMasterID(void) 
+bool IsMasterID(void)
 {
-	bool isMaster = false;
-
-	for (int i = 0; i < 5; i++) 
-	{
-		if((CardID[i] == masterID.ID[i]) && i == 4)
-		{
-			isMaster = true;
-		}
-	}
-	
-	return isMaster;
+	return memcmp(CardID, masterID.ID, ID_LENGTH) == 0;
 }
 
 /*******************************************************************************
